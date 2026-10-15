@@ -59,7 +59,7 @@ jobs:
 
   docker:
     runs-on: ubuntu-latest
-    needs: [build, code-quality]
+    needs: build
     # Chỉ push image sau khi code đã merge vào main
     if: github.event_name == 'push'
 
